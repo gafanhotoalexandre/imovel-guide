@@ -24,6 +24,7 @@ export function HouseModal() {
         </DialogHeader>
         <div className="grid gap-4 py-4">
           <img src={house} alt="Imóvel" />
+          {/* rounded na img */}
         </div>
       </DialogContent>
     </Dialog>

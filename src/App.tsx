@@ -4,6 +4,7 @@ import { RuleOfThreeCalculator } from './components/RuleOfThreeCalculator'
 import { PeopleCard } from './components/PeopleCard'
 import { SendMessageCard } from './components/SendMessageCard'
 import { HouseCard } from './components/HouseCard'
+import { DownloadImageCard } from './components/DownloadImageCard'
 
 export default function App() {
   return (
@@ -17,6 +18,7 @@ export default function App() {
             <SendMessageCard />
             <RuleOfThreeCalculator />
             <HouseCard />
+            <DownloadImageCard />
           </section>
         </div>
       </main>
