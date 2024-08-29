@@ -1,9 +1,17 @@
+import { useState } from 'react'
 import { peopleInfo } from '@/constants'
 import { CardTemplate } from './CardTemplate'
 
 export function PeopleCard() {
+  const [visiblePhone, setVisiblePhone] = useState<string | null>(null)
+
   function formatNumber(num: number) {
     return new Intl.NumberFormat('pt-br').format(num)
+  }
+
+  function handlePhoneClick(phone: string) {
+    // Toggle
+    setVisiblePhone((prev) => (prev === phone ? null : phone))
   }
 
   return (
@@ -11,7 +19,7 @@ export function PeopleCard() {
       content={
         <div className="flex flex-col gap-4 pt-6">
           {peopleInfo.map(({ img, name, phone, points }) => (
-            <div className="flex items-stretch gap-4">
+            <div className="flex items-stretch gap-4" key={phone}>
               <div className="relative w-40 flex justify-center">
                 <img
                   src={img.src}
@@ -38,12 +46,12 @@ export function PeopleCard() {
                 </p>
 
                 <p>
-                  <a
-                    href={phone}
-                    className="text-sm text-primary-orange underline lowercase"
+                  <span
+                    onClick={() => handlePhoneClick(phone)}
+                    className="text-sm text-primary-orange underline underline-offset-2 lowercase cursor-pointer"
                   >
-                    Ver telefone
-                  </a>
+                    {visiblePhone === phone ? phone : 'Ver telefone'}
+                  </span>
                 </p>
               </div>
             </div>
