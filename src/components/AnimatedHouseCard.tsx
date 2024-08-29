@@ -5,7 +5,7 @@ export function AnimatedHouseCard() {
   return (
     <CardTemplate
       content={
-        <div className="mt-6 relative overflow-hidden">
+        <div className="mt-6 rounded-lg relative overflow-hidden">
           <img
             src={house}
             alt="Imóvel"
