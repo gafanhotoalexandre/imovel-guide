@@ -33,7 +33,6 @@ export function SendMessageCard() {
           Enviar Mensagem
         </Button>
       }
-      className="max-w-[350px]"
     />
   )
 }
