@@ -18,6 +18,14 @@ export function RuleOfThreeCalculator() {
     }
   }
 
+  function handleInputChange(
+    setter: React.Dispatch<React.SetStateAction<number | undefined>>,
+    value: string
+  ) {
+    setter(parseFloat(value))
+    setResult(undefined)
+  }
+
   return (
     <CardTemplate
       className="h-full flex flex-col justify-between"
@@ -29,14 +37,14 @@ export function RuleOfThreeCalculator() {
               type="number"
               placeholder="60"
               value={valueA !== undefined ? valueA : ''}
-              onChange={(e) => setValueA(parseFloat(e.target.value))}
+              onChange={(e) => handleInputChange(setValueA, e.target.value)}
             />
             <Separator className="flex-1 min-w-10 bg-black" />
             <Input
               type="number"
               placeholder="100"
               value={valueB !== undefined ? valueB : ''}
-              onChange={(e) => setValueB(parseFloat(e.target.value))}
+              onChange={(e) => handleInputChange(setValueB, e.target.value)}
             />
           </span>
 
@@ -45,7 +53,7 @@ export function RuleOfThreeCalculator() {
               type="number"
               placeholder="30"
               value={valueC !== undefined ? valueC : ''}
-              onChange={(e) => setValueC(parseFloat(e.target.value))}
+              onChange={(e) => handleInputChange(setValueC, e.target.value)}
             />
             <Separator className="flex-1 min-w-10 bg-black" />
             <Input
