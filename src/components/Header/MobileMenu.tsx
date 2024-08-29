@@ -14,7 +14,7 @@ import { navLinks, secondaryLinks } from '@/constants'
 export default function MobileMenu() {
   return (
     <Sheet>
-      <SheetTrigger>
+      <SheetTrigger asChild>
         <button className="block rounded p-2.5 text-white transition hover:text-gray-200/75 lg:hidden">
           <span className="sr-only">Toggle menu</span>
           <Menu size={32} />
