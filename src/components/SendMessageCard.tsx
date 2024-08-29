@@ -22,7 +22,7 @@ export function SendMessageCard() {
                 id="Subject"
                 className="p-3 w-full rounded-lg border border-gray-200 align-top shadow-sm resize-none sm:text-sm outline-none focus:border-blue-600 focus:ring-1 focus:ring-blue-600"
                 rows={4}
-                placeholder="Digite o assuto..."
+                placeholder="Digite o assunto..."
               ></textarea>
             </div>
           </div>
