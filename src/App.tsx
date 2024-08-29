@@ -5,6 +5,7 @@ import { PeopleCard } from './components/PeopleCard'
 import { SendMessageCard } from './components/SendMessageCard'
 import { HouseCard } from './components/HouseCard'
 import { DownloadImageCard } from './components/DownloadImageCard'
+import { AnimatedHouseCard } from './components/AnimatedHouseCard'
 
 export default function App() {
   return (
@@ -19,6 +20,7 @@ export default function App() {
             <RuleOfThreeCalculator />
             <HouseCard />
             <DownloadImageCard />
+            <AnimatedHouseCard />
           </section>
         </div>
       </main>

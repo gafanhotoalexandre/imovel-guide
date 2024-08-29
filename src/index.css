@@ -75,3 +75,13 @@
 input[type='number'] {
   @apply [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none
 }
+
+@keyframes zoomOut {
+  from {
+    transform: scale(1.8);
+  }
+
+  to {
+    transform: scale(1);
+  }
+}
