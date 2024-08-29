@@ -77,6 +77,9 @@ module.exports = {
       fontFamily: {
         sans: ['Inter', 'ui-sans-serif', 'system-ui'],
       },
+      blur: {
+        xs: '2px',
+      }
     },
   },
   plugins: [require("tailwindcss-animate")],
