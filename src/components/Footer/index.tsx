@@ -1,6 +1,6 @@
 import { footerLinks, logo } from '@/constants'
 
-export default function Footer() {
+export function Footer() {
   return (
     <footer className="bg-primary-darkblue">
       <div className="mx-auto max-w-screen-xl px-4 py-4 sm:px-6 lg:px-8">

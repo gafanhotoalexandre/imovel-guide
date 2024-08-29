@@ -1,7 +1,7 @@
 import { peopleInfo } from '@/constants'
 import { CardTemplate } from './CardTemplate'
 
-export default function PeopleCard() {
+export function PeopleCard() {
   function formatNumber(num: number) {
     return new Intl.NumberFormat('pt-br').format(num)
   }

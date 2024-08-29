@@ -1,7 +1,7 @@
 import { logo, navLinks, secondaryLinks } from '@/constants'
 import { Menu } from 'lucide-react'
 
-export default function Header() {
+export function Header() {
   return (
     <header className="bg-primary-darkblue">
       <div className="mx-auto flex h-16 max-w-screen-xl items-center gap-8 px-4 sm:px-6 lg:px-8">

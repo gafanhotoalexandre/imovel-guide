@@ -5,7 +5,7 @@ import { Button } from './ui/button'
 import { Input } from './ui/input'
 import { Separator } from './ui/separator'
 
-export default function RuleOfThreeCalculator() {
+export function RuleOfThreeCalculator() {
   const [valueA, setValueA] = useState<number | undefined>(undefined)
   const [valueB, setValueB] = useState<number | undefined>(undefined)
   const [valueC, setValueC] = useState<number | undefined>(undefined)

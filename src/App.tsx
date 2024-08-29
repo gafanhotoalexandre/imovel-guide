@@ -1,7 +1,7 @@
-import Footer from './components/Footer'
-import Header from './components/Header'
-import RuleOfThreeCalculator from './components/RuleOfThreeCalculator'
-import PeopleCard from './components/PeopleCard'
+import { Footer } from './components/Footer'
+import { Header } from './components/Header'
+import { RuleOfThreeCalculator } from './components/RuleOfThreeCalculator'
+import { PeopleCard } from './components/PeopleCard'
 import { SendMessageCard } from './components/SendMessageCard'
 
 export default function App() {
