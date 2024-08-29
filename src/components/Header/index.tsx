@@ -10,8 +10,8 @@ export default function Header() {
           <img src={logo} alt="Logo Imóvel Guide" />
         </a>
 
-        <div className="flex flex-1 items-center justify-end md:justify-between">
-          <nav aria-label="Global" className="hidden md:block">
+        <div className="flex flex-1 items-center justify-end lg:justify-between">
+          <nav aria-label="Global" className="hidden lg:block">
             <ul className="flex items-center gap-6 text-sm">
               {navLinks.map(({ label, href }) => (
                 <li key={`${label}-${href}`}>
@@ -28,7 +28,7 @@ export default function Header() {
 
           <div className="flex items-center gap-4">
             <div className="sm:flex sm:gap-2 sm:items-center">
-              <nav aria-label="Global" className="hidden md:block">
+              <nav aria-label="Global" className="hidden lg:block">
                 <ul className="flex items-center gap-6 text-sm">
                   {secondaryLinks.map(({ label, href }) => (
                     <li key={`${label}-${href}`}>
@@ -51,7 +51,7 @@ export default function Header() {
               </a>
             </div>
 
-            <button className="block rounded p-2.5 text-white transition hover:text-gray-200/75 md:hidden">
+            <button className="block rounded p-2.5 text-white transition hover:text-gray-200/75 lg:hidden">
               <span className="sr-only">Toggle menu</span>
               <Menu size={32} />
             </button>
