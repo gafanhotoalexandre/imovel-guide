@@ -1,50 +1,105 @@
-# React + TypeScript + Vite
+# Imóvel Guide - Frontend Test Project
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Overview
 
-Currently, two official plugins are available:
+Este projeto foi desenvolvido como parte de um processo seletivo para a vaga de estágio em frontend na Imóvel Guide. O objetivo é demonstrar habilidades práticas na construção de componentes React, estilização com Tailwind CSS e implementação de funcionalidades interativas e visuais.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+O projeto consiste em uma aplicação simples que reúne diversos componentes como cartões de informações, calculadora, e elementos interativos com animações.
 
-## Expanding the ESLint configuration
+## Tecnologias Utilizadas
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- **React**: Biblioteca JavaScript para construção de interfaces de usuário.
+- **TypeScript**: Superset do JavaScript que adiciona tipagem estática ao código.
+- **Tailwind CSS**: Framework de CSS utilitário para estilização rápida e consistente.
+- **ShadcnUI**: Biblioteca de componentes React com estilos modernos e personalizáveis.
+- **HTML2Canvas**: Biblioteca utilizada para capturar e salvar screenshots de elementos DOM como imagens.
 
-- Configure the top-level `parserOptions` property like this:
+## Estrutura do Projeto
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+- **App Component**: Componente principal que organiza e renderiza os subcomponentes dentro da aplicação.
+
+```tsx
+import { Footer } from './components/Footer'
+import { Header } from './components/Header'
+import { RuleOfThreeCalculator } from './components/RuleOfThreeCalculator'
+import { PeopleCard } from './components/PeopleCard'
+import { SendMessageCard } from './components/SendMessageCard'
+import { HouseCard } from './components/HouseCard'
+import { DownloadImageCard } from './components/DownloadImageCard'
+import { AnimatedHouseCard } from './components/AnimatedHouseCard'
+
+export default function App() {
+  return (
+    <div>
+      <Header />
+      <main>
+        <div className="mx-auto max-w-screen-xl px-4 py-8 sm:px-6 sm:py-12 lg:px-8 lg:py-16">
+          <section className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+            <PeopleCard />
+            <SendMessageCard />
+            <RuleOfThreeCalculator />
+            <HouseCard />
+            <DownloadImageCard />
+            <AnimatedHouseCard />
+          </section>
+        </div>
+      </main>
+      <Footer />
+    </div>
+  )
+}
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+### Componentes Principais
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+1. **Header**: Exibe o cabeçalho da aplicação, incluindo a logo da empresa.
+2. **Footer**: Exibe o rodapé com informações relevantes.
+3. **PeopleCard**: Componente que mostra informações sobre pessoas, usado para demonstrar a manipulação de dados e exibição dinâmica.
+4. **SendMessageCard**: Um cartão com funcionalidade de envio de mensagens, simula uma interação típica em formulários.
+5. **RuleOfThreeCalculator**: Calculadora de regra de três que permite o cálculo baseado em três valores, com resultado exibido dinamicamente.
+6. **HouseCard**: Componente visual que exibe uma imagem de um imóvel, simulando um cartão de anúncio.
+7. **DownloadImageCard**: Componente que permite baixar a imagem do cartão como um arquivo PNG, utilizando a biblioteca html2canvas.
+8. **AnimatedHouseCard**: Componente que exibe um cartão com uma imagem de imóvel, aplicando um efeito de "zoom out" na imagem ao carregar a página.
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+## Projeto no Ar
+
+Você pode acessar a versão ao vivo deste projeto através do seguinte link:
+
+[Imóvel Guide - Projeto](https://imovel-guide-blond.vercel.app/)
+
+## Justificativa de Uso de Assets
+
+- **Imagens de Pexels**: A maioria das imagens utilizadas para simular conteúdo foram obtidas do site Pexels, que fornece imagens gratuitas para uso não comercial.
+- **Assets da Imóvel Guide**: Dois assets foram retirados diretamente do site da empresa Imóvel Guide:
+  - **Logo da Imóvel Guide (PNG)**
+  - **Favicon da Imóvel Guide**
+
+Esses assets foram utilizados para garantir a identidade visual e coesão com o branding da empresa durante o desenvolvimento deste projeto.
+
+## Como Rodar o Projeto
+
+1. Clone este repositório:
+
+```bash
+ git clone https://github.com/gafanhotoalexandre/imovel-guide.git
 ```
+
+2. Navegue até o diretório do projeto:
+
+```bash
+  cd imovel-guide
+```
+
+3. Instale as dependências:
+
+```bash
+  npm install
+```
+
+4. Rode a aplicação em modo de desenvolvimento:
+
+```bash
+  npm run dev
+```
+
+5. Acesse a aplicação em http://localhost:3000
