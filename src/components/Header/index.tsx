@@ -1,5 +1,5 @@
+import MobileMenu from './MobileMenu'
 import { logo, navLinks, secondaryLinks } from '@/constants'
-import { Menu } from 'lucide-react'
 
 export function Header() {
   return (
@@ -51,10 +51,8 @@ export function Header() {
               </a>
             </div>
 
-            <button className="block rounded p-2.5 text-white transition hover:text-gray-200/75 lg:hidden">
-              <span className="sr-only">Toggle menu</span>
-              <Menu size={32} />
-            </button>
+            {/* Mobile Menu Button */}
+            <MobileMenu />
           </div>
         </div>
       </div>
