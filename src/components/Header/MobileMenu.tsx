@@ -2,9 +2,11 @@ import { Menu } from 'lucide-react'
 
 import {
   Sheet,
-  SheetClose,
   SheetContent,
+  SheetDescription,
   SheetFooter,
+  SheetHeader,
+  SheetTitle,
   SheetTrigger,
 } from '../ui/sheet'
 import { Separator } from '../ui/separator'
@@ -21,7 +23,15 @@ export default function MobileMenu() {
         </button>
       </SheetTrigger>
 
-      <SheetContent className="pt-14" side="right">
+      <SheetContent className="pt-8" side="right">
+        <SheetHeader>
+          <SheetTitle>
+            <span className="sr-only">Menu de navegação</span>
+          </SheetTitle>
+          <SheetDescription>
+            <span className="sr-only">Menu de navegação da app</span>
+          </SheetDescription>
+        </SheetHeader>
         <nav aria-label="Mobile">
           <ul className="flex flex-col gap-4 text-sm">
             {navLinks.map(({ label, href }) => (
@@ -68,10 +78,6 @@ export default function MobileMenu() {
             Cadastre-se
           </a>
         </SheetFooter>
-
-        <SheetClose className="absolute right-4 top-4 rounded-sm opacity-70 ring-offset-background transition-opacity hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 disabled:pointer-events-none">
-          <span className="sr-only">Close</span>
-        </SheetClose>
       </SheetContent>
     </Sheet>
   )
