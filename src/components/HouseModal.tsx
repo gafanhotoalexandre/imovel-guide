@@ -2,6 +2,7 @@ import { Button } from '@/components/ui/button'
 import {
   Dialog,
   DialogContent,
+  DialogDescription,
   DialogHeader,
   DialogTitle,
   DialogTrigger,
@@ -20,6 +21,9 @@ export function HouseModal() {
       <DialogContent className="max-w-xs sm:max-w-2xl">
         <DialogHeader>
           <DialogTitle className="mb-4"></DialogTitle>
+          <DialogDescription>
+            <span className="sr-only">Modal para apresentar imagem</span>
+          </DialogDescription>
           <Separator className="w-full" />
         </DialogHeader>
         <div className="grid gap-4 py-4">
