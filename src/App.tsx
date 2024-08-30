@@ -6,6 +6,8 @@ import { SendMessageCard } from './components/SendMessageCard'
 import { HouseCard } from './components/HouseCard'
 import { DownloadImageCard } from './components/DownloadImageCard'
 import { AnimatedHouseCard } from './components/AnimatedHouseCard'
+import { Toaster } from 'sonner'
+// import { Toaster } from './components/ui/sonner'
 
 export default function App() {
   return (
@@ -25,6 +27,8 @@ export default function App() {
         </div>
       </main>
       <Footer />
+
+      <Toaster richColors position="top-center" />
     </div>
   )
 }

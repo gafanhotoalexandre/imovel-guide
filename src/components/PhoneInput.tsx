@@ -1,6 +1,11 @@
 import { InputMask } from '@react-input/mask'
 
-export function PhoneInput() {
+interface PhoneInputProps {
+  value: string
+  onChange: (event: React.ChangeEvent<HTMLInputElement>) => void
+}
+
+export function PhoneInput({ value, onChange }: PhoneInputProps) {
   return (
     <label
       htmlFor="phoneNumber"
@@ -11,6 +16,8 @@ export function PhoneInput() {
         replacement={{ _: /\d/ }}
         type="text"
         id="phoneNumber"
+        value={value}
+        onChange={onChange}
         className="peer h-8 w-full border-none bg-transparent p-0 placeholder-transparent focus:border-transparent focus:outline-none focus:ring-0 sm:text-sm"
         placeholder="Telefone"
       />
@@ -20,5 +27,4 @@ export function PhoneInput() {
       </span>
     </label>
   )
-  // <InputMask mask="(__) _____-____" replacement={{ _: /\d/ }} />
 }

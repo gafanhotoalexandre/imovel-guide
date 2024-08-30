@@ -1,6 +1,11 @@
 import { InputMask } from '@react-input/mask'
 
-export function CpfInput() {
+interface CpfInputProps {
+  value: string
+  onChange: (event: React.ChangeEvent<HTMLInputElement>) => void
+}
+
+export function CpfInput({ value, onChange }: CpfInputProps) {
   return (
     <label
       htmlFor="cpf"
@@ -11,6 +16,8 @@ export function CpfInput() {
         replacement={{ _: /\d/ }}
         type="text"
         id="cpf"
+        value={value}
+        onChange={onChange}
         className="peer h-8 w-full border-none bg-transparent p-0 placeholder-transparent focus:border-transparent focus:outline-none focus:ring-0 sm:text-sm"
         placeholder="CPF"
       />
@@ -20,5 +27,4 @@ export function CpfInput() {
       </span>
     </label>
   )
-  // <InputMask mask="(__) _____-____" replacement={{ _: /\d/ }} />
 }
